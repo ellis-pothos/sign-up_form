@@ -1,5 +1,28 @@
+@font-face {
+    font-family: "figtree";
+    src:
+        url("fonts/figtree-variablefont_wght-webfont.woff2") format("woff2"),
+        url("fonts/figtree-variablefont_wght-webfont.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+    }
+
+@font-face {
+    font-family: "tourney";
+    src: 
+        url("fonts/tourney-variablefont_wdthwght-webfont.woff") format("woff"),
+        url("fonts/tourney-variablefont_wdthwght-webfont.woff2") format("woff2");
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root {
+    --light_grey: rgb(243, 243, 243);
+}
+
 body {
     margin: 0px;
+    font-family: "figtree";
 }
 
 * {
@@ -13,40 +36,74 @@ body {
     display: flex;
 }
 
-#left {
+.left {
     width: 33.33vw;
     height: 100vh;
     overflow: hidden;
 }
 
-img {
-    /* position: absolute; 
-    top: 0; left: 0;  */
-    width: auto;
-    height: 100%;    
+.left > img {
+    min-width: 33.33vw;
+    max-height: 100vh;
+    position: absolute;
+    object-fit: cover;   
+    display: block;
+    z-index: -1;
 }
 
-#right {
+.floater {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    width: 100%;
+    height: 100px;
+    top: 20rem;
+    background-color: var(--light_grey);
+    opacity: 0.5;
+    font-family: "tourney";
+    font-weight: 800;
+}
+
+.floater > img {
+    height: 100%;
+}
+
+.right {
     width: 66.66vw;
     height: 100vh;
-    flex: 1; 
+    background-color: white;
+}
+
+.right_containers {
+    /* min-height: 33.33vh; */
 }
 
 #top {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 10px
-    /* align-items: center; */
+    flex-shrink: 1.5;
+    padding: 50px 10px 10px 10px;
+    background-color: var(--light_grey);
 }
 
-.right_containers {
-    width: 100%;
-    height: 33.33%;
+#top > :first-child {
+    margin: 30px 50px 0 0;
+}
+
+#top > :last-child {
+    font-size: 2rem;
+    font-family: "tourney";
+    margin-bottom: 15px;
 }
 
 #form_container {
     height: fit-content;
+    box-shadow: 10px 5px 5px rgba(194, 194, 194, 0.3);
+    font-size: 11px;
+    flex-shrink: 1;
 }
 
 .field {
@@ -67,3 +124,45 @@ img {
 input:not([type="radio"]){
     max-width: 250px; 
 }
+
+#hear_text {
+    margin: 0;
+    font-size: 1.5rem;
+    font-family: "tourney";
+}
+
+.hear_about_options {
+    margin: 5px;
+    display: flex; 
+}
+
+input[type="radio"] {
+    margin: 0 0 0 3px; 
+}
+
+input:focus {
+    box-shadow: 3px 3px 3px rgba(194, 194, 194, 0.5);
+    border-width: 1px;
+    border-color: blue;
+}
+
+#bottom {
+    margin-top: 10px;
+    flex-shrink: 1.5;
+    font-size: 11px;
+    padding-left: 10px;
+}
+
+#submit_button {
+    margin: 20px auto 20px 30px;
+    padding: 10px 20px;
+    font-size: 1.5rem;
+    font-family: "tourney";
+}
+
+#login_btn {
+    font-family: "figtree";
+    padding: 3px 5px;
+}
+
+

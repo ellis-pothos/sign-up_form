@@ -9,15 +9,20 @@
 <body>
             
     <div id="container">
-        <div id="left">
-            <img src="pine-trees.jpg" alt="snow covered pine trees">
+        <div class="left">
+            <img src="pine-trees.jpg" alt="public domain image of snow covered pine trees">
+            <!-- <div class="floater">
+                <img src="Logo _no words_black_transparent.png" alt="new path counseling logo">
+                New Path Counseling
+            </div> -->
         </div>
 
-        <div id="right">
+        <div class="right">
             <div class="right_containers" id="top">
                 <p> This is not a real service, but you should definitely sign-up anyways! Give us your information and we will fulfill your wildest dreams. Give us a chance...</p>
                 <p>You know you want to...</p>
             </div>
+
             <div class="right_containers" id="form_container">
                 <form action="example.com/path" method="post">
                     <div class="field" class="name">
@@ -40,61 +45,63 @@
 
                         <div class="form_input">
                             <label for="phone">*Phone number:</label>
-                            <input type="tel" id="phone" placeholder="(123)456-7890" required>
+                            <input type="tel" id="phone" placeholder="(123) 456-7890" required>
                         </div>
                     </div>
 
                     <div class="field" class="password">
                         <div class="form_input">
                             <label for="user_password">*Password:</label>
-                            <input type="password" id="user_password" placeholder="********" required>
+                            <input type="password" id="user_password" placeholder="********" 
+                            minlength="8" pattern="(?=.*[a-z])(?=.*[A-Z]).{8,}" 
+                            title="Must contain at least one number and one uppercase and lowercase letter, 
+                            and at least 8 or more characters" required>
                         </div>
 
                         <div class="form_input">
                             <label for="confirm_password">*Confirm password:</label>
-                            <input type="password" id="confirm_password" placeholder="********" required>
+                            <input type="password" id="confirm_password" placeholder="********" minlength="8" required>
                         </div>
                     </div>
 
                     <div class="field" id="hear_about">
                         <p id="hear_text">How did you hear about us?</p>
-                            <div class="hear_about_options">
-                                <div>
+                            <div>
+                                <div class="hear_about_options">
                                     <label for="search_engine">Search engine</label>
                                     <input type="radio" id="search_engine">
                                 </div>
 
-                                <div>
+                                <div class="hear_about_options">
                                     <label for="listserv">Listserv</label>
                                     <input type="radio" id="listserv">
                                 </div>
 
-                                <div>
+                                <div class="hear_about_options">
                                     <label for="social_media">Social media</label>
                                     <input type="radio" id="social_media">
                                 </div>
 
-                                <div>
+                                <div class="hear_about_options">
                                     <label for="other_hearing">Other</label>
                                     <input type="radio" id="other_hearing">
                                 </div>
                             </div>
                         </div>
-                        
-                    <div class="form_input">
-                            <button type="submit">Submit</button>
                     </div>
+                        
+            <div class="right_containers" id="bottom">
+                <div class="button_container">
+                    <button type="submit" id="submit_button">Submit</button>
+                </div>
                 </form>
-            </div>
-            <div class="form" id="bottom">
-                
+
+                <p>Already have an account?
+                    <button id="login_btn">Log in</button>
+                </p>
             </div>
         </div>
     </div>
-    <form action="example.com/path" method="post">
-    </form>
-    <div class="right_containers" id="bottom">
 
-    </div>
 </body>
 </html>
